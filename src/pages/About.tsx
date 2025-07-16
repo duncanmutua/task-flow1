@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card-component';
 import { Target, Users, BookOpen, Award, MapPin, Phone, Mail } from 'lucide-react';
@@ -6,9 +5,9 @@ import { Target, Users, BookOpen, Award, MapPin, Phone, Mail } from 'lucide-reac
 const About: React.FC = () => {
   const team = [
     {
-      name: 'Dr. Sarah Mwangi',
-      role: 'Founder & CEO',
-      bio: 'Former MOE curriculum specialist with 15 years in education policy.',
+      name: 'Duncan Mutua',
+      role: 'Founder & CEO', 
+      bio: 'University of Nairobi Graduate Teacher of Mathematics and Geography.',
       image: '/placeholder.svg'
     },
     {
