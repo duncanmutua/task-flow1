@@ -1,73 +1,206 @@
-# Welcome to your Lovable project
 
-## Project info
+# TaskFlow - React Task Management Application
 
-**URL**: https://lovable.dev/projects/cfe252e5-c16a-4607-8c94-1a747b3e4002
+🚀 **Week 3 Assignment: React.js, JSX, and Tailwind CSS – Mastering Front-End Development**
 
-## How can I edit this code?
+A comprehensive React application demonstrating modern component architecture, state management, API integration, and responsive design using TypeScript and Tailwind CSS.
 
-There are several ways of editing your application.
+## 🌟 Features
 
-**Use Lovable**
+### ✅ Task Management
+- **Create Tasks**: Add new tasks with title and description
+- **Mark as Complete**: Toggle task completion status
+- **Delete Tasks**: Remove unwanted tasks
+- **Filter Tasks**: View all, active, or completed tasks
+- **Search Tasks**: Find tasks by title or description
+- **Persistent Storage**: Tasks saved to local storage
+- **Statistics Dashboard**: View task completion metrics
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/cfe252e5-c16a-4607-8c94-1a747b3e4002) and start prompting.
+### 🔌 API Integration
+- **JSONPlaceholder API**: Fetch users and posts data
+- **Search Functionality**: Filter API results in real-time
+- **Pagination**: Navigate through large datasets
+- **Loading States**: Smooth loading indicators
+- **Error Handling**: Graceful error management and retry options
+- **Responsive Cards**: Beautiful data presentation
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🎨 Design & UX
+- **Responsive Design**: Optimized for mobile, tablet, and desktop
+- **Dark/Light Mode**: Toggle between themes with persistence
+- **Modern UI Components**: Reusable Button, Card, and Layout components
+- **Smooth Animations**: Tailwind-powered transitions and hover effects
+- **Accessibility**: Proper ARIA labels and keyboard navigation
 
-**Use your preferred IDE**
+### 🏗️ Architecture
+- **Component-Based**: Modular, reusable UI components
+- **Custom Hooks**: `useLocalStorage`, `useTheme` for state management
+- **React Context**: Theme management across the application
+- **TypeScript**: Full type safety and IntelliSense support
+- **React Router**: Multi-page navigation with active route highlighting
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Technologies Used
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **React 18** - Component framework
+- **TypeScript** - Type safety and developer experience
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Router** - Client-side routing
+- **Vite** - Fast build tool and development server
+- **Lucide React** - Beautiful icon library
+- **React Query** - Server state management
+- **Shadcn/UI** - High-quality component library
 
-Follow these steps:
+## 🚀 Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Installation
 
-# Step 3: Install the necessary dependencies.
-npm i
+1. **Clone the repository**
+   ```bash
+   git clone <your-repository-url>
+   cd taskflow-app
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:8080`
+
+### Build for Production
+
+```bash
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+## 📱 Screenshots
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Dashboard
+![Dashboard Screenshot](https://via.placeholder.com/800x400?text=Dashboard+Screenshot)
+*Modern dashboard with feature overview and quick navigation*
 
-**Use GitHub Codespaces**
+### Task Management
+![Task Management Screenshot](https://via.placeholder.com/800x400?text=Task+Management+Screenshot)
+*Comprehensive task management with filtering and search*
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### API Explorer
+![API Explorer Screenshot](https://via.placeholder.com/800x400?text=API+Explorer+Screenshot)
+*Interactive API data exploration with pagination*
 
-## What technologies are used for this project?
+### Dark Mode
+![Dark Mode Screenshot](https://via.placeholder.com/800x400?text=Dark+Mode+Screenshot)
+*Beautiful dark theme throughout the application*
 
-This project is built with:
+## 🏗️ Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+src/
+├── components/
+│   ├── layout/
+│   │   ├── Layout.tsx          # Main layout wrapper
+│   │   ├── Navbar.tsx          # Navigation component
+│   │   └── Footer.tsx          # Footer component
+│   ├── tasks/
+│   │   └── TaskManager.tsx     # Task management logic
+│   ├── api/
+│   │   └── ApiExplorer.tsx     # API data exploration
+│   └── ui/
+│       ├── button-variants.tsx # Custom button component
+│       └── card-component.tsx  # Reusable card component
+├── hooks/
+│   ├── useTheme.tsx           # Theme management hook
+│   └── useLocalStorage.tsx    # Local storage hook
+├── pages/
+│   ├── Dashboard.tsx          # Landing page
+│   ├── Tasks.tsx              # Task management page
+│   ├── ApiData.tsx            # API explorer page
+│   └── NotFound.tsx           # 404 page
+├── lib/
+│   └── utils.ts               # Utility functions
+└── App.tsx                    # Main application component
+```
 
-## How can I deploy this project?
+## 🎯 Learning Objectives Achieved
 
-Simply open [Lovable](https://lovable.dev/projects/cfe252e5-c16a-4607-8c94-1a747b3e4002) and click on Share -> Publish.
+### ✅ Component Architecture
+- Created reusable UI components (Button, Card, Navbar, Footer)
+- Implemented proper prop interfaces with TypeScript
+- Demonstrated component composition and reusability
+- Used layout components for consistent structure
 
-## Can I connect a custom domain to my Lovable project?
+### ✅ State Management & Hooks
+- **useState**: Managing component state for tasks, filters, and UI state
+- **useEffect**: Side effects for data loading and localStorage sync
+- **useContext**: Global theme management across components
+- **Custom Hooks**: `useLocalStorage` for data persistence, `useTheme` for theme switching
 
-Yes, you can!
+### ✅ API Integration
+- Fetched data from JSONPlaceholder API (users and posts)
+- Implemented loading and error states
+- Added search functionality with real-time filtering
+- Created pagination for large datasets
+- Proper error handling with retry mechanisms
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### ✅ Tailwind CSS Mastery
+- Responsive design with mobile-first approach
+- Dark mode implementation with theme persistence
+- Custom animations and transitions
+- Utility-first styling approach
+- Component-specific styling patterns
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🚀 Deployment
+
+This application can be deployed to various platforms:
+
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy automatically on every push
+
+### Netlify
+1. Build the project: `npm run build`
+2. Drag and drop the `dist` folder to Netlify
+3. Or connect your Git repository for continuous deployment
+
+### GitHub Pages
+1. Install gh-pages: `npm install --save-dev gh-pages`
+2. Add deploy script to package.json
+3. Run: `npm run deploy`
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🎓 Educational Value
+
+This project serves as a comprehensive example of:
+- Modern React development patterns
+- TypeScript integration in React applications
+- Responsive design with Tailwind CSS
+- State management best practices
+- API integration patterns
+- Component architecture principles
+- Development workflow with Vite
+
+Perfect for learning React fundamentals and advanced concepts!
+
+---
+
+**Built with ❤️ for educational purposes**
