@@ -90,16 +90,11 @@ const ApiExplorer: React.FC = () => {
     }
   };
 
-  const getCurrentUsers = (): User[] => {
+  const getCurrentItems = () => {
+    const items = activeTab === 'users' ? filteredUsers : filteredPosts;
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    return filteredUsers.slice(startIndex, endIndex);
-  };
-
-  const getCurrentPosts = (): Post[] => {
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    return filteredPosts.slice(startIndex, endIndex);
+    return items.slice(startIndex, endIndex);
   };
 
   const getTotalPages = () => {
@@ -107,6 +102,7 @@ const ApiExplorer: React.FC = () => {
     return Math.ceil(items.length / itemsPerPage);
   };
 
+  const currentItems = getCurrentItems();
   const totalPages = getTotalPages();
 
   if (loading) {
@@ -186,7 +182,7 @@ const ApiExplorer: React.FC = () => {
       {/* Content */}
       {activeTab === 'users' ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-          {getCurrentUsers().map((user) => (
+          {currentItems.map((user: User) => (
             <Card key={user.id} hover>
               <CardHeader>
                 <div className="flex items-center gap-3">
@@ -231,7 +227,7 @@ const ApiExplorer: React.FC = () => {
         </div>
       ) : (
         <div className="space-y-4 mb-6">
-          {getCurrentPosts().map((post) => (
+          {currentItems.map((post: Post) => (
             <Card key={post.id} hover>
               <CardContent className="p-6">
                 <div className="flex items-start justify-between mb-3">
