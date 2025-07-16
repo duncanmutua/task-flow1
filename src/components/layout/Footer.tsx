@@ -1,84 +1,70 @@
 
 import React from 'react';
-import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { GraduationCap, Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const socialLinks = [
-    { name: 'GitHub', href: '#', icon: Github },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Email', href: '#', icon: Mail },
-  ];
-
   const quickLinks = [
-    { name: 'About', href: '#' },
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Terms of Service', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Teacher Resources', href: '/teachers' },
+    { name: 'Student Materials', href: '/students' },
+    { name: 'Contact', href: '/about' },
   ];
 
   return (
-    <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+    <footer className="bg-green-900 text-white">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-4">
-              TaskFlow
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-4 max-w-md">
-              A modern task management application built with React, TypeScript, and Tailwind CSS. 
-              Manage your tasks efficiently with a beautiful, responsive interface.
-            </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 transition-colors duration-200"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" />
-                </a>
-              ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <div className="flex items-center mb-4">
+              <GraduationCap className="h-8 w-8 text-green-400 mr-2" />
+              <span className="text-2xl font-bold text-green-400">CBC360</span>
             </div>
+            <p className="text-green-100 mb-4 max-w-md">
+              Supporting Kenya's educational transformation through the CBC curriculum.
+            </p>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
-              Quick Links
-            </h4>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+                  <Link
+                    to={item.href}
+                    className="text-green-100 hover:text-white transition-colors duration-200"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
-              Features
-            </h4>
-            <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-              <li>Task Management</li>
-              <li>API Integration</li>
-              <li>Dark Mode</li>
-              <li>Responsive Design</li>
-            </ul>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-2 text-green-100">
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-2" />
+                <span>info@cbc360.org.ke</span>
+              </div>
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-2" />
+                <span>+254 757 236138</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="h-4 w-4 mr-2" />
+                <span>Nairobi, Kenya</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
-          <p className="text-center text-gray-500 dark:text-gray-400">
-            © {currentYear} TaskFlow. Built with ❤️ using React & Tailwind CSS.
+        <div className="mt-8 pt-8 border-t border-green-800">
+          <p className="text-center text-green-100">
+            © {currentYear} CBC360. All rights reserved.
           </p>
         </div>
       </div>
