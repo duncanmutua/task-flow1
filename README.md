@@ -2,7 +2,7 @@
 TaskFlow is a modern, fully responsive React app built with TypeScript and Tailwind CSS. It combines elegant UI with powerful functionality including local task management and external API data exploration.
 
 🔗 Live Demo: [Deployed on Vercel](https://task-flow1.vercel.app/)
-📚 Built for: Week 3 Assignment – React, JSX & Tailwind CSS
+Week 3 Assignment – React, JSX & Tailwind CSS
 
 🌟 Key Features
 ✅ Task Management
@@ -71,6 +71,7 @@ Home Page
 Taks Page
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/da648517-6fa7-4edc-8bb5-f5166443a981" />
 API Exploerer
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e7515728-4554-4f9a-b05f-105b6274de37" />
 
 📦 Deployment
 Easily deployed via:
